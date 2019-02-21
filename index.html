@@ -66,8 +66,6 @@
         const slideAt = (window.scrollY+window.innerHeight) - a.height/2;
         const imageBottom = a.offsetTop + a.height;
         const isShown = slideAt > a.offsetTop;
-        console.log(slideAt);
-        console.log(a.offsetTop);
         const isNotScrolledDown = imageBottom > window.scrollY;
 
         if (isShown && isNotScrolledDown) {
