@@ -60,17 +60,17 @@
 
     const slides = document.querySelectorAll('.slide-in');
     
-    function slideChecker(a) {
+    function slideChecker() {
       
-      slides.forEach(a => {
-        const slideAt = (window.scrollY+window.innerHeight) - a.height/2;
-        const imageBottom = a.offsetTop + a.height;
-        const isShown = slideAt > a.offsetTop;
+      slides.forEach(slide => {
+        const slideAt = (window.scrollY+window.innerHeight) - slide.height/2;
+        const imageBottom = slide.offsetTop + slide.height;
+        const isShown = slideAt > slide.offsetTop;
         const isNotScrolledDown = imageBottom > window.scrollY;
 
         if (isShown && isNotScrolledDown) {
-          a.classList.add('active');
-        } else {a.classList.remove('active');};
+          slide.classList.add('active');
+        } else {slide.classList.remove('active');};
 
       })
     }
